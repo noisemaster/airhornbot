@@ -82,7 +82,7 @@ const overwatch = {
     'zenyatta_enemy',
     'zenyatta_friendly',
 
-    'dva_', // should be in its own sound repository
+    'dva_;)', // should be in its own sound repository
     'anyong'
   ]
 }
