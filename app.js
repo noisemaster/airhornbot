@@ -26,7 +26,7 @@ ${soundList}`
     sound.commands.forEach(async command => {
       if (commandArray[0] === command) {
         let soundFile = ''
-        if (commandArray[1] !== undefined) {
+        if (commandArray[1] !== undefined && sound.files.filter(file => file === commandArray[1]).length >= 1) {
           soundFile = `sounds/${sound.prefix}_${commandArray[1]}.dca`
         } else {
           soundFile = `sounds/${sound.prefix}_${sound.files[Math.floor(Math.random() * sound.files.length)]}.dca`
