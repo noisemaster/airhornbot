@@ -4,7 +4,7 @@
  */
 
 const airhorn = {
-  name: 'Airhorn',
+  name: 'airhorn',
   prefix: 'airhorn',
   commands: [
     '!airhorn'
@@ -102,7 +102,7 @@ const khaled = {
 }
 
 const cena = {
-  name: 'John Cena',
+  name: 'cena',
   prefix: 'jc',
   commands: [
     '!johncena',
