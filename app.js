@@ -12,13 +12,25 @@ bot.on('ready', () => {
 bot.on('messageCreate', msg => {
   const commandArray = msg.content.split(' ').map(x => x.toLowerCase())
   if (commandArray[0] === '!help') {
-    let soundList = sounds
-      .map(x => `**${x.name}** - ${x.commands.join(', ')}`)
-      .join('\n')
-    soundList = `**Use any of the following commands on the right to get a random sound!
+    if (commandArray[1]) {
+      let soundCategory = sounds.filter(sound => sound.name === commandArray[1])
+      if (soundCategory.length !== 0) {
+        soundCategory = soundCategory[0]
+        let soundList = soundCategory.files.map(file => `- ${file}`).join('\n')
+        soundList = `**The sounds for the category ${commandArray[1]}**
+Use any of ${soundCategory.commands.join(', ')} with any of the following sounds to play that sound
+${soundList}`
+        bot.createMessage(msg.channel.id, soundList)
+      }
+    } else {
+      let soundList = sounds
+        .map(x => `**${x.name}** - ${x.commands.join(', ')}`)
+        .join('\n')
+      soundList = `**Use any of the following commands on the right to get a random sound!
 Use !help {name on the left} to see the commands needed to play a sound directly!**
 ${soundList}`
-    bot.createMessage(msg.channel.id, soundList)
+      bot.createMessage(msg.channel.id, soundList)
+    }
     return
   }
 
