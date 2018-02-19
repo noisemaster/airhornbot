@@ -11,6 +11,17 @@ bot.on('ready', () => {
 
 bot.on('messageCreate', msg => {
   const commandArray = msg.content.split(' ')
+  if (commandArray[0] === '!help') {
+    let soundList = sounds
+      .map(x => `**${x.name}** - ${x.commands.join(', ')}`)
+      .join('\n')
+    soundList = `**Use any of the following commands on the right to get a random sound!
+Use !help {name on the left} to see the commands needed to play a sound directly!**
+${soundList}`
+    bot.createMessage(msg.channel.id, soundList)
+    return
+  }
+
   sounds.forEach(sound => {
     sound.commands.forEach(async command => {
       if (commandArray[0] === command) {
