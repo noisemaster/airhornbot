@@ -10,7 +10,7 @@ bot.on('ready', () => {
 })
 
 bot.on('messageCreate', msg => {
-  const commandArray = msg.content.split(' ')
+  const commandArray = msg.content.split(' ').map(x => x.toLowerCase())
   if (commandArray[0] === '!help') {
     let soundList = sounds
       .map(x => `**${x.name}** - ${x.commands.join(', ')}`)
