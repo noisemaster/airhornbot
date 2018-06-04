@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eris": "^0.8.4"
+    "eris": "^0.8.4",
+    "signale": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^4.17.0",

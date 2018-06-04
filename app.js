@@ -1,11 +1,12 @@
 const Eris = require('eris')
+const signale = require('signale')
 const sounds = require('./sounds')
-const config = require('./config')
+const { discordToken } = require('./config')
 
-const bot = new Eris(config.discordToken)
+const bot = new Eris(discordToken)
 
 bot.on('ready', () => {
-  console.log('Ready')
+  signale.success('Ready')
   bot.editStatus({name: 'airhorn.wav', type: 2})
 })
 
@@ -21,6 +22,7 @@ bot.on('messageCreate', msg => {
 Use any of ${soundCategory.commands.join(', ')} with any of the following sounds to play that sound
 ${soundList}`
         bot.createMessage(msg.channel.id, soundList)
+        signale.success(`Sent help message for ${commandArray[1]}`)
       }
     } else {
       let soundList = sounds
@@ -30,6 +32,7 @@ ${soundList}`
 Use !help {name on the left} to see the commands needed to play a sound directly!**
 ${soundList}`
       bot.createMessage(msg.channel.id, soundList)
+      signale.success('Sent help message')
     }
     return
   }
@@ -48,14 +51,14 @@ ${soundList}`
           const voiceID = msg.member.voiceState.channelID
           try {
             const connection = await bot.joinVoiceChannel(voiceID)
-            console.log(`Playing ${soundFile} in voice channel ${voiceID}`)
+            signale.pending(`Playing ${soundFile} in voice channel ${voiceID}`)
             await connection.play(soundFile, {format: 'dca'})
             connection.once('end', async () => {
               await bot.leaveVoiceChannel(voiceID)
-              console.log(`Left voice channel ${voiceID}`)
+              signale.success(`Left voice channel ${voiceID}`)
             })
           } catch (e) {
-            console.error(`Error occured in vc ${voiceID}: e.toString()`)
+            signale.fatal(`Error playing ${soundFile} in voice channel ${voiceID}`, e)
           }
         }
       }
