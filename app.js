@@ -17,7 +17,7 @@ bot.on('messageCreate', msg => {
       let soundCategory = sounds.filter(sound => sound.name === commandArray[1])
       if (soundCategory.length !== 0) {
         soundCategory = soundCategory[0]
-        let soundList = soundCategory.files.map(file => `- ${file}`).join('\n')
+        let soundList = soundCategory.files.map(file => `- ${file.name}`).join('\n')
         soundList = `**The sounds for the category ${commandArray[1]}**
 Use any of ${soundCategory.commands.join(', ')} with any of the following sounds to play that sound
 ${soundList}`
