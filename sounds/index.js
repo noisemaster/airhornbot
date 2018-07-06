@@ -35,7 +35,7 @@ const overwatch = {
   ],
   files: [
     // , filetype: 'dca' }looking for files o[
-    // http://rpboyer{ name: 15., filetype: 'dca' }github.io/files-o[-overwatch/
+    // http://rpboyer15.github.io/files-o[-overwatch/
     { name: 'bastion', filetype: 'dca' },
     { name: 'dva_enemy', filetype: 'dca' },
     { name: 'dva_friendly', filetype: 'dca' },
