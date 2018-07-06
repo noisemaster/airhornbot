@@ -41,10 +41,15 @@ ${soundList}`
     sound.commands.forEach(async command => {
       if (commandArray[0] === command) {
         let soundFile = ''
-        if (commandArray[1] !== undefined && sound.files.filter(file => file === commandArray[1]).length >= 1) {
-          soundFile = `sounds/${sound.prefix}_${commandArray[1]}.dca`
+        let soundfound = sound.files.filter(file => file.name === commandArray[1])
+        let randomSound = {}
+        let isRandomSound = false
+        if (commandArray[1] !== undefined && soundfound.length >= 1) {
+          soundFile = `sounds/${sound.prefix}_${soundfound[0].name}.${soundfound[0].filetype}`
         } else {
-          soundFile = `sounds/${sound.prefix}_${sound.files[Math.floor(Math.random() * sound.files.length)]}.dca`
+          isRandomSound = true
+          randomSound = sound.files[Math.floor(Math.random() * sound.files.length)]
+          soundFile = `sounds/${sound.prefix}_${randomSound.name}.${randomSound.filetype}`
         }
 
         if (msg.member.voiceState.channelID) {
@@ -52,7 +57,11 @@ ${soundList}`
           try {
             const connection = await bot.joinVoiceChannel(voiceID)
             signale.pending(`Playing ${soundFile} in voice channel ${voiceID}`)
-            await connection.play(soundFile, {format: 'dca'})
+            if (isRandomSound) {
+              await connection.play(soundFile, {format: randomSound.filetype})
+            } else {
+              await connection.play(soundFile, {format: soundfound[0].filetype})
+            }
             connection.once('end', async () => {
               await bot.leaveVoiceChannel(voiceID)
               signale.success(`Left voice channel ${voiceID}`)

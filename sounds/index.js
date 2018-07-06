@@ -10,20 +10,20 @@ const airhorn = {
     '!airhorn'
   ],
   files: [
-    'default',
-    'reverb',
-    'spam',
-    'tripletap',
-    'fourtap',
-    'distant',
-    'echo',
-    'clownfull',
-    'clownshort',
-    'clownspam',
-    'highfartlong',
-    'highfartshort',
-    'midshort',
-    'truck'
+    { name: 'default', filetype: 'dca' },
+    { name: 'reverb', filetype: 'dca' },
+    { name: 'spam', filetype: 'dca' },
+    { name: 'tripletap', filetype: 'dca' },
+    { name: 'fourtap', filetype: 'dca' },
+    { name: 'distant', filetype: 'dca' },
+    { name: 'echo', filetype: 'dca' },
+    { name: 'clownfull', filetype: 'dca' },
+    { name: 'clownshort', filetype: 'dca' },
+    { name: 'clownspam', filetype: 'dca' },
+    { name: 'highfartlong', filetype: 'dca' },
+    { name: 'highfartshort', filetype: 'dca' },
+    { name: 'midshort', filetype: 'dca' },
+    { name: 'truck', filetype: 'dca' }
   ]
 }
 const overwatch = {
@@ -34,56 +34,56 @@ const overwatch = {
     '!owult'
   ],
   files: [
-    // looking for files o[
-    // http://rpboyer15.github.io/files-o[-overwatch/
-    'bastion',
-    'dva_enemy',
-    'dva_friendly',
-    'genji_enemy',
-    'genji_friendly',
-    'hanzo_enemy',
-    'hanzo_friendly',
-    'junkrat_enemy',
-    'junkrat_friendly',
-    'lucio_friendly',
-    'lucio_enemy',
-    'mccree_enemy',
-    'mccree_friendly',
-    'mei_friendly',
+    // , filetype: 'dca' }looking for files o[
+    // http://rpboyer{ name: 15., filetype: 'dca' }github.io/files-o[-overwatch/
+    { name: 'bastion', filetype: 'dca' },
+    { name: 'dva_enemy', filetype: 'dca' },
+    { name: 'dva_friendly', filetype: 'dca' },
+    { name: 'genji_enemy', filetype: 'dca' },
+    { name: 'genji_friendly', filetype: 'dca' },
+    { name: 'hanzo_enemy', filetype: 'dca' },
+    { name: 'hanzo_friendly', filetype: 'dca' },
+    { name: 'junkrat_enemy', filetype: 'dca' },
+    { name: 'junkrat_friendly', filetype: 'dca' },
+    { name: 'lucio_friendly', filetype: 'dca' },
+    { name: 'lucio_enemy', filetype: 'dca' },
+    { name: 'mccree_enemy', filetype: 'dca' },
+    { name: 'mccree_friendly', filetype: 'dca' },
+    { name: 'mei_friendly', filetype: 'dca' },
     // //there may be multiple mei friendly ult lines
     // //from this: https://www.reddit.com/r/Overwatch/comments/4fdw0z/is_that_ultimate_friendly_or_hostile/
-    'mei_enemy',
-    'mercy_friendly',
-    'mercy_friendly_devil',
-    'mercy_friendly_valkyrie',
-    'mercy_enemy',
-    'orisa_enemy',
-    'orisa_friendly',
-    'pharah_enemy',
-    'pharah_friendly',
-    'reaper_enemy',
-    'reaper_friendly',
-    'reinhardt',
-    'roadhog_enemy',
-    'roadhog_friendly',
-    '76_enemy',
-    '76_friendly',
-    'sombra_enemy',
-    'sombra_friendly',
-    'symmetra_teleporter',
-    'symmetra_shield',
-    'torbjorn',
-    'tracer_enemy', // enemy line has constiations. constiations are an argument for splitting it up to be !owtracer, putting them in separate sound collections
-    'tracer_friendly', // doesn't exist?
-    'widow_enemy', // consider shortening to widow?
-    'widow_friendly', // same as above
-    'zarya_enemy',
-    'zarya_friendly',
-    'zenyatta_enemy',
-    'zenyatta_friendly',
+    { name: 'mei_enemy', filetype: 'dca' },
+    { name: 'mercy_friendly', filetype: 'dca' },
+    { name: 'mercy_friendly_devil', filetype: 'dca' },
+    { name: 'mercy_friendly_valkyrie', filetype: 'dca' },
+    { name: 'mercy_enemy', filetype: 'dca' },
+    { name: 'orisa_enemy', filetype: 'dca' },
+    { name: 'orisa_friendly', filetype: 'dca' },
+    { name: 'pharah_enemy', filetype: 'dca' },
+    { name: 'pharah_friendly', filetype: 'dca' },
+    { name: 'reaper_enemy', filetype: 'dca' },
+    { name: 'reaper_friendly', filetype: 'dca' },
+    { name: 'reinhardt', filetype: 'dca' },
+    { name: 'roadhog_enemy', filetype: 'dca' },
+    { name: 'roadhog_friendly', filetype: 'dca' },
+    { name: '76_enemy', filetype: 'dca' },
+    { name: '76_friendly', filetype: 'dca' },
+    { name: 'sombra_enemy', filetype: 'dca' },
+    { name: 'sombra_friendly', filetype: 'dca' },
+    { name: 'symmetra_teleporter', filetype: 'dca' },
+    { name: 'symmetra_shield', filetype: 'dca' },
+    { name: 'torbjorn', filetype: 'dca' },
+    { name: 'tracer_enemy', filetype: 'dca' }, // enemy line has constiations. constiations are an argument for splitting it up to be !owtracer, putting them in separate sound collections
+    { name: 'tracer_friendly', filetype: 'dca' }, // doesn't exist?
+    { name: 'widow_enemy', filetype: 'dca' }, // consider shortening to widow?
+    { name: 'widow_friendly', filetype: 'dca' }, // same as above
+    { name: 'zarya_enemy', filetype: 'dca' },
+    { name: 'zarya_friendly', filetype: 'dca' },
+    { name: 'zenyatta_enemy', filetype: 'dca' },
+    { name: 'zenyatta_friendly', filetype: 'dca' },
 
-    'dva_;)', // should be in its own sound repository
-    'anyong'
+    { name: 'dva_;)', filetype: 'dca' }, // should be in its own sound repository
+    { name: 'anyong', filetype: 'dca' }
   ]
 }
 
@@ -95,9 +95,9 @@ const khaled = {
     '!anothaone'
   ],
   files: [
-    'one',
-    'one_classic',
-    'one_echo'
+    { name: 'one', filetype: 'dca' },
+    { name: 'one_classic', filetype: 'dca' },
+    { name: 'one_echo', filetype: 'dca' }
   ]
 }
 
@@ -109,12 +109,12 @@ const cena = {
     '!cena'
   ],
   files: [
-    'airhorn',
-    'echo',
-    'full',
-    'jc',
-    'nameis',
-    'spam'
+    { name: 'airhorn', filetype: 'dca' },
+    { name: 'echo', filetype: 'dca' },
+    { name: 'full', filetype: 'dca' },
+    { name: 'jc', filetype: 'dca' },
+    { name: 'nameis', filetype: 'dca' },
+    { name: 'spam', filetype: 'dca' }
   ]
 }
 
@@ -126,9 +126,9 @@ const cow = {
     '!stanislav'
   ],
   files: [
-    'herd',
-    'moo',
-    'x3'
+    { name: 'herd', filetype: 'dca' },
+    { name: 'moo', filetype: 'dca' },
+    { name: 'x3', filetype: 'dca' }
   ]
 }
 
@@ -140,10 +140,10 @@ const birthday = {
     '!bday'
   ],
   files: [
-    'horn',
-    'horn3',
-    'sadhorn',
-    'weakhorn'
+    { name: 'horn', filetype: 'dca' },
+    { name: 'horn3', filetype: 'dca' },
+    { name: 'sadhorn', filetype: 'dca' },
+    { name: 'weakhorn', filetype: 'dca' }
   ]
 }
 
@@ -154,9 +154,9 @@ const roode = {
     '!roode'
   ],
   files: [
-    'glorious',
-    'defend',
-    'victorious_full'
+    { name: 'glorious', filetype: 'dca' },
+    { name: 'defend', filetype: 'dca' },
+    { name: 'victorious_full', filetype: 'dca' }
   ]
 }
 
@@ -167,8 +167,8 @@ const revival = {
     '!revival'
   ],
   files: [
-    'we_go_hard',
-    'say_yeah'
+    { name: 'we_go_hard', filetype: 'dca' },
+    { name: 'say_yeah', filetype: 'dca' }
   ]
 }
 
@@ -180,7 +180,7 @@ const styles = {
     '!aj'
   ],
   files: [
-    'gay_community'
+    { name: 'gay_community', filetype: 'dca' }
   ]
 }
 
@@ -191,7 +191,7 @@ const dummy = {
     '!dummy'
   ],
   files: [
-    'yeah'
+    { name: 'yeah', filetype: 'dca' }
   ]
 }
 
@@ -204,13 +204,13 @@ const dota = {
     '!tobiwan'
   ],
   files: [
-    'alldead',
-    'digitalsports',
-    'dingdingding',
-    'disaster',
-    'liquid',
-    'pudge',
-    'waow'
+    { name: 'alldead', filetype: 'dca' },
+    { name: 'digitalsports', filetype: 'dca' },
+    { name: 'dingdingding', filetype: 'dca' },
+    { name: 'disaster', filetype: 'dca' },
+    { name: 'liquid', filetype: 'dca' },
+    { name: 'pudge', filetype: 'dca' },
+    { name: 'waow', filetype: 'dca' }
   ]
 }
 
@@ -222,25 +222,25 @@ const jones = {
     '!alexjones'
   ],
   files: [
-    'kissing_goblins',
-    'kissing_goblins_full',
-    'in_bed_goblin',
-    'charging_goblins',
-    'pepsi_taste_test',
-    '1776',
-    'human',
-    'destroy_everything',
-    'hot_blood',
-    'have_children',
-    'gang_of_mustaches',
-    'sick_of_it',
-    'what_is_that_joke',
-    'what_is_venezuela',
-    'the_gay_bomb',
-    'punches',
-    'its_a_gay_bomb',
-    'gay_frogs',
-    'fight_for_your_life'
+    { name: 'kissing_goblins', filetype: 'dca' },
+    { name: 'kissing_goblins_full', filetype: 'dca' },
+    { name: 'in_bed_goblin', filetype: 'dca' },
+    { name: 'charging_goblins', filetype: 'dca' },
+    { name: 'pepsi_taste_test', filetype: 'dca' },
+    { name: '1776', filetype: 'dca' },
+    { name: 'human', filetype: 'dca' },
+    { name: 'destroy_everything', filetype: 'dca' },
+    { name: 'hot_blood', filetype: 'dca' },
+    { name: 'have_children', filetype: 'dca' },
+    { name: 'gang_of_mustaches', filetype: 'dca' },
+    { name: 'sick_of_it', filetype: 'dca' },
+    { name: 'what_is_that_joke', filetype: 'dca' },
+    { name: 'what_is_venezuela', filetype: 'dca' },
+    { name: 'the_gay_bomb', filetype: 'dca' },
+    { name: 'punches', filetype: 'dca' },
+    { name: 'its_a_gay_bomb', filetype: 'dca' },
+    { name: 'gay_frogs', filetype: 'dca' },
+    { name: 'fight_for_your_life', filetype: 'dca' }
   ]
 }
 
@@ -251,14 +251,14 @@ const mummy = {
     '!mummy'
   ],
   files: [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8'
+    { name: '1', filetype: 'dca' },
+    { name: '2', filetype: 'dca' },
+    { name: '3', filetype: 'dca' },
+    { name: '4', filetype: 'dca' },
+    { name: '5', filetype: 'dca' },
+    { name: '6', filetype: 'dca' },
+    { name: '7', filetype: 'dca' },
+    { name: '8', filetype: 'dca' }
   ]
 }
 
@@ -270,7 +270,7 @@ const imhere = {
     '!imhere'
   ],
   files: [
-    'find_me'
+    { name: 'find_me', filetype: 'dca' }
   ]
 }
 
@@ -281,7 +281,7 @@ const newsreel = {
     '!newsreel'
   ],
   files: [
-    'ooh_swish'
+    { name: 'ooh_swish', filetype: 'dca' }
   ]
 }
 
@@ -292,10 +292,10 @@ const logan = {
     '!logan'
   ],
   files: [
-    '1',
-    '2',
-    '3',
-    '4'
+    { name: '1', filetype: 'dca' },
+    { name: '2', filetype: 'dca' },
+    { name: '3', filetype: 'dca' },
+    { name: '4', filetype: 'dca' }
   ]
 }
 
@@ -306,7 +306,7 @@ const foxy = {
     '!foxy'
   ],
   files: [
-    'trying'
+    { name: 'trying', filetype: 'dca' }
   ]
 }
 
@@ -317,9 +317,9 @@ const money = {
     '!money'
   ],
   files: [
-    'lodsofemone',
-    'lodsofemone_full',
-    'wopitout'
+    { name: 'lodsofemone', filetype: 'dca' },
+    { name: 'lodsofemone_full', filetype: 'dca' },
+    { name: 'wopitout', filetype: 'dca' }
   ]
 }
 
@@ -330,7 +330,7 @@ const gw2 = {
     '!gw2'
   ],
   files: [
-    'rose'
+    { name: 'rose', filetype: 'dca' }
   ]
 }
 
@@ -342,7 +342,7 @@ const weed = {
     '!weed'
   ],
   files: [
-    'all'
+    { name: 'all', filetype: 'dca' }
   ]
 }
 
@@ -353,10 +353,10 @@ const tf2 = {
     '!tf2'
   ],
   files: [
-    'overtime1',
-    'overtime2',
-    'overtime3',
-    'overtime4'
+    { name: 'overtime1', filetype: 'dca' },
+    { name: 'overtime2', filetype: 'dca' },
+    { name: 'overtime3', filetype: 'dca' },
+    { name: 'overtime4', filetype: 'dca' }
   ]
 }
 
@@ -367,7 +367,20 @@ const assblast = {
     '!assblastusa'
   ],
   files: [
-    'full'
+    { name: 'full', filetype: 'dca' }
+  ]
+}
+
+const fire = {
+  name: '🔥',
+  prefix: '🔥',
+  commands: [
+    '!🔥',
+    '!fire',
+    '!:fire:'
+  ],
+  files: [
+    { name: 'i_burn', filetype: 'webm' }
   ]
 }
 
@@ -394,5 +407,6 @@ module.exports = [
   gw2,
   weed,
   tf2,
-  assblast
+  assblast,
+  fire
 ]
