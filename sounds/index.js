@@ -384,6 +384,18 @@ const fire = {
   ]
 }
 
+const balor = {
+  name: 'balor',
+  prefix: 'finn',
+  commands: [
+    '!finn',
+    '!balor'
+  ],
+  files: [
+    { name: 'likes', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -408,5 +420,6 @@ module.exports = [
   weed,
   tf2,
   assblast,
-  fire
+  fire,
+  balor
 ]
