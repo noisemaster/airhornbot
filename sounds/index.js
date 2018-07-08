@@ -330,7 +330,10 @@ const gw2 = {
     '!gw2'
   ],
   files: [
-    { name: 'rose', filetype: 'dca' }
+    { name: 'rose', filetype: 'dca' },
+    { name: 'outrun_a_centaur', filetype: 'webm' },
+    { name: 'run_from_centaur', filetype: 'webm' },
+    { name: 'my_leg', filetype: 'webm' }
   ]
 }
 
@@ -396,6 +399,21 @@ const balor = {
   ]
 }
 
+const rose = {
+  name: '🌹',
+  prefix: '🌹',
+  commands: [
+    '!rose',
+    ':rose:',
+    '!🌹'
+  ],
+  files: [
+    { name: 'red_like_roses_1', filetype: 'webm' },
+    { name: 'red_like_roses_2', filetype: 'webm' },
+    { name: 'red_roses_too', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -421,5 +439,6 @@ module.exports = [
   tf2,
   assblast,
   fire,
-  balor
+  balor,
+  rose
 ]
