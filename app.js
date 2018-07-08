@@ -99,13 +99,11 @@ async function playSound (voiceID, { file, format }) {
     signale.pending(`Playing ${file} in voice channel ${voiceID}`)
     await connection.play(file, {format})
     connection.once('end', async () => {
-      console.log(soundQueue[voiceID].length)
       if (soundQueue[voiceID] && soundQueue[voiceID].length > 0) {
         const poppedFile = soundQueue[voiceID].shift()
         await playSound(voiceID, poppedFile)
         return
       }
-      console.log(soundQueue[voiceID].length)
       if (soundQueue[voiceID] && soundQueue[voiceID].length === 0) {
         await bot.leaveVoiceChannel(voiceID)
         activeSessions.delete(voiceID)
