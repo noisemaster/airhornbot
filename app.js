@@ -4,6 +4,8 @@ const sounds = require('./sounds')
 const { discordToken } = require('./config')
 
 const bot = new Eris(discordToken)
+let soundQueue = {}
+let activeSessions = new Set()
 
 bot.on('ready', () => {
   signale.success('Ready')
@@ -40,8 +42,8 @@ ${soundList}`
   sounds.forEach(sound => {
     sound.commands.forEach(async command => {
       if (commandArray[0] === command) {
+        const soundfound = sound.files.filter(file => file.name === commandArray[1])
         let soundFile = ''
-        let soundfound = sound.files.filter(file => file.name === commandArray[1])
         let randomSound = {}
         let isRandomSound = false
         if (commandArray[1] !== undefined && soundfound.length >= 1) {
@@ -52,27 +54,71 @@ ${soundList}`
           soundFile = `sounds/${sound.prefix}_${randomSound.name}.${randomSound.filetype}`
         }
 
-        if (msg.member.voiceState.channelID) {
-          const voiceID = msg.member.voiceState.channelID
-          try {
-            const connection = await bot.joinVoiceChannel(voiceID)
-            signale.pending(`Playing ${soundFile} in voice channel ${voiceID}`)
-            if (isRandomSound) {
-              await connection.play(soundFile, {format: randomSound.filetype})
+        const voiceID = msg.member.voiceState.channelID
+        if (voiceID) {
+          if (activeSessions.has(voiceID)) {
+            // There is active playback, add to queue
+            signale.pending(`Queued ${soundFile} for playback in voice channel ${voiceID}`)
+            if (!soundQueue[voiceID]) {
+              if (isRandomSound) {
+                soundQueue[voiceID] = [{file: soundFile, format: randomSound.filetype}]
+              } else {
+                soundQueue[voiceID] = [{file: soundFile, format: soundfound[0].filetype}]
+              }
             } else {
-              await connection.play(soundFile, {format: soundfound[0].filetype})
+              if (isRandomSound) {
+                soundQueue[voiceID].push({file: soundFile, format: randomSound.filetype})
+              } else {
+                soundQueue[voiceID].push({file: soundFile, format: soundfound[0].filetype})
+              }
             }
-            connection.once('end', async () => {
-              await bot.leaveVoiceChannel(voiceID)
-              signale.success(`Left voice channel ${voiceID}`)
-            })
-          } catch (e) {
-            signale.fatal(`Error playing ${soundFile} in voice channel ${voiceID}`, e)
+          } else {
+            if (isRandomSound) {
+              await playSound(voiceID, {file: soundFile, format: randomSound.filetype})
+            } else {
+              await playSound(voiceID, {file: soundFile, format: soundfound[0].filetype})
+            }
           }
         }
       }
     })
   })
 })
+
+/**
+ * Play a sound in a voice channel
+ *
+ * Current Issue: Playback can sometimes stop broadcasting audio requiring the entire queue to finish playback
+ * @param {string} voiceID ID of voice Channel
+ * @param {{file: String, format: String}} soundFile Object containing playback information
+ */
+async function playSound (voiceID, { file, format }) {
+  try {
+    const connection = await bot.joinVoiceChannel(voiceID)
+    activeSessions.add(voiceID)
+    signale.pending(`Playing ${file} in voice channel ${voiceID}`)
+    await connection.play(file, {format})
+    connection.once('end', async () => {
+      console.log(soundQueue[voiceID].length)
+      if (soundQueue[voiceID] && soundQueue[voiceID].length > 0) {
+        const poppedFile = soundQueue[voiceID].shift()
+        await playSound(voiceID, poppedFile)
+        return
+      }
+      console.log(soundQueue[voiceID].length)
+      if (soundQueue[voiceID] && soundQueue[voiceID].length === 0) {
+        await bot.leaveVoiceChannel(voiceID)
+        activeSessions.delete(voiceID)
+        signale.success(`Left voice channel ${voiceID}`)
+      } else if (!soundQueue[voiceID]) {
+        await bot.leaveVoiceChannel(voiceID)
+        activeSessions.delete(voiceID)
+        signale.success(`Left voice channel ${voiceID}`)
+      }
+    })
+  } catch (e) {
+    signale.fatal(`Error playing ${file} in voice channel ${voiceID}`, e)
+  }
+}
 
 bot.connect()
