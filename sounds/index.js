@@ -374,15 +374,15 @@ const assblast = {
   ]
 }
 
-const fire = {
-  name: '🔥',
-  prefix: '🔥',
+const rwby = {
+  name: 'rwby',
+  prefix: 'rwby',
   commands: [
-    '!🔥',
-    '!fire',
-    '!:fire:'
+    '!rwby'
   ],
   files: [
+    { name: 'red_like_roses_1', filetype: 'webm' },
+    { name: 'red_like_roses_2', filetype: 'webm' },
     { name: 'i_burn', filetype: 'webm' }
   ]
 }
@@ -408,8 +408,6 @@ const rose = {
     '!🌹'
   ],
   files: [
-    { name: 'red_like_roses_1', filetype: 'webm' },
-    { name: 'red_like_roses_2', filetype: 'webm' },
     { name: 'red_roses_too', filetype: 'webm' }
   ]
 }
@@ -438,7 +436,7 @@ module.exports = [
   weed,
   tf2,
   assblast,
-  fire,
+  rwby,
   balor,
   rose
 ]
