@@ -14,6 +14,8 @@ bot.on('ready', () => {
 
 bot.on('messageCreate', msg => {
   const commandArray = msg.content.split(' ').map(x => x.toLowerCase())
+
+  // Help commands
   if (commandArray[0] === '!help') {
     if (commandArray[1]) {
       let soundCategory = sounds.filter(sound => sound.name === commandArray[1])
@@ -39,6 +41,7 @@ ${soundList}`
     return
   }
 
+  // Play sound
   sounds.forEach(sound => {
     sound.commands.forEach(async command => {
       if (commandArray[0] === command) {
