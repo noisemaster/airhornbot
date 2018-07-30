@@ -383,7 +383,8 @@ const rwby = {
   files: [
     { name: 'red_like_roses_1', filetype: 'webm' },
     { name: 'red_like_roses_2', filetype: 'webm' },
-    { name: 'i_burn', filetype: 'webm' }
+    { name: 'i_burn', filetype: 'webm' },
+    { name: 'wat', filetype: 'webm' }
   ]
 }
 
