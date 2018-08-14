@@ -413,6 +413,17 @@ const rose = {
   ]
 }
 
+const jordan = {
+  name: 'jordan',
+  prefix: 'jordan',
+  commands: [
+    '!jordan',
+  ],
+  files: [
+    { name: 'stop_it', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -439,5 +450,6 @@ module.exports = [
   assblast,
   rwby,
   balor,
-  rose
+  rose,
+  jordan
 ]
