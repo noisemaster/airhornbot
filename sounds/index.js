@@ -210,7 +210,9 @@ const dota = {
     { name: 'disaster', filetype: 'dca' },
     { name: 'liquid', filetype: 'dca' },
     { name: 'pudge', filetype: 'dca' },
-    { name: 'waow', filetype: 'dca' }
+    { name: 'waow', filetype: 'dca' },
+    { name: 'echoslammajamma', filetype: 'webm' },
+    { name: 'lakad_matatag', filetype: 'webm' }
   ]
 }
 
@@ -384,6 +386,7 @@ const rwby = {
     { name: 'red_like_roses_1', filetype: 'webm' },
     { name: 'red_like_roses_2', filetype: 'webm' },
     { name: 'i_burn', filetype: 'webm' },
+    { name: 'burning_gold', filetype: 'webm' },
     { name: 'wat', filetype: 'webm' }
   ]
 }
@@ -424,6 +427,33 @@ const jordan = {
   ]
 }
 
+const blazblue = {
+  name: 'blazblue',
+  prefix: 'blazblue',
+  commands: [
+    '!blazblue',
+  ],
+  files: [
+    { name: 'nu_pointless', filetype: 'webm' },
+    { name: 'nu_pointless2', filetype: 'webm' },
+    { name: 'plat_perv', filetype: 'webm' }
+  ]
+}
+
+const undernight = {
+  name: 'undernight',
+  prefix: 'undernight',
+  commands: [
+    '!undernight',
+  ],
+  files: [
+    { name: 'paco_bell', filetype: 'webm' },
+    { name: 'vatista1', filetype: 'webm' },
+    { name: 'vatista2', filetype: 'webm' },
+    { name: 'mika_blaze', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -451,5 +481,7 @@ module.exports = [
   rwby,
   balor,
   rose,
-  jordan
+  jordan,
+  blazblue,
+  undernight
 ]
