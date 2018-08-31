@@ -427,6 +427,28 @@ const jordan = {
   ]
 }
 
+const grado = {
+  name: 'grado',
+  prefix: 'grado',
+  commands: [
+    '!grado',
+  ],
+  files: [
+    { name: 'bad_boy', filetype: 'webm' }
+  ]
+}
+
+const rag = {
+  name: 'raggedy ann & andy',
+  prefix: 'rag',
+  commands: [
+    '!rag',
+  ],
+  files: [
+    { name: 'sick_and_tired', filetype: 'webm' }
+  ]
+}
+
 const blazblue = {
   name: 'blazblue',
   prefix: 'blazblue',
@@ -483,5 +505,7 @@ module.exports = [
   rose,
   jordan,
   blazblue,
-  undernight
+  undernight,
+  grado,
+  rag
 ]
