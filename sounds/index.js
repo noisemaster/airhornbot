@@ -476,6 +476,18 @@ const undernight = {
   ]
 }
 
+const payday2 = {
+  name: 'payday 2',
+  prefix: 'pd2',
+  commands: [
+    '!pd2',
+    '!payday2'
+  ],
+  files: [
+    { name: 'dallas_medic_bag', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -507,5 +519,6 @@ module.exports = [
   blazblue,
   undernight,
   grado,
-  rag
+  rag,
+  payday2
 ]
