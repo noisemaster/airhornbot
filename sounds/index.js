@@ -383,6 +383,7 @@ const rwby = {
     '!rwby'
   ],
   files: [
+    { name: 'laugh', filetype: 'webm' },
     { name: 'red_like_roses_1', filetype: 'webm' },
     { name: 'red_like_roses_2', filetype: 'webm' },
     { name: 'i_burn', filetype: 'webm' },
@@ -488,6 +489,76 @@ const payday2 = {
   ]
 }
 
+const striminal = {
+  name: 'striminal',
+  prefix: 'striminal',
+  commands: [
+    '!striminal'
+  ],
+  files: [
+    { name: 'ill_steal_it', filetype: 'webm' },
+    { name: 'never_know_bunch', filetype: 'webm' },
+    { name: 'never_know', filetype: 'webm' }
+  ]
+}
+
+const sami = {
+  name: 'Sami Zayn',
+  prefix: 'sami',
+  commands: [
+    '!sz',
+    '!sami',
+    '!zayn'
+  ],
+  files: [
+    { name: 'police', filetype: 'webm' },
+  ]
+}
+
+const kay = {
+  name: 'Billie Kay',
+  prefix: 'kay',
+  commands: [
+    '!bk', '!kay'
+  ],
+  files: [
+    { name: 'joking', filetype: 'webm'},
+  ]
+}
+
+const office = {
+  name: 'The Office',
+  prefix: 'office',
+  commands: [
+    '!office'
+  ],
+  files: [
+    { name: 'art', filetype: 'webm'},
+  ]
+}
+
+const gultiygear = {
+  name: 'Guilty Gear',
+  prefix: 'guilty',
+  commands: [
+    '!guilty'
+  ],
+  files: [
+    { name: 'elphelt', filetype: 'webm'},
+  ]
+}
+
+const bugenhagen = {
+  name: 'Eric Bugenhagen',
+  prefix: 'bugenhagen',
+  commands: [
+    '!bugenhagen'
+  ],
+  files: [
+    { name: 'eeeeee', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -510,7 +581,7 @@ module.exports = [
   money,
   gw2,
   weed,
-  tf2,
+  // tf2,
   assblast,
   rwby,
   balor,
@@ -520,5 +591,11 @@ module.exports = [
   undernight,
   grado,
   rag,
-  payday2
+  payday2,
+  striminal,
+  sami,
+  kay,
+  office,
+  gultiygear,
+  bugenhagen
 ]
