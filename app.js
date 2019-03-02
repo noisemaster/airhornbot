@@ -17,16 +17,17 @@ bot.on('messageCreate', msg => {
 
   // Help commands
   if (commandArray[0] === '!help') {
-    if (commandArray[1]) {
-      let soundCategory = sounds.filter(sound => sound.name === commandArray[1])
+    let [, ...values] = msg.content.split(' ').map(x => x.toLowerCase())
+    if (values.length > 0) {
+      let soundCategory = sounds.filter(sound => sound.name.toLowerCase() === values.join(' '))
       if (soundCategory.length !== 0) {
         soundCategory = soundCategory[0]
         let soundList = soundCategory.files.map(file => `- ${file.name}`).join('\n')
-        soundList = `**The sounds for the category ${commandArray[1]}**
+        soundList = `**The sounds for the category ${values.join(' ')}**
 Use any of ${soundCategory.commands.join(', ')} with any of the following sounds to play that sound
 ${soundList}`
         bot.createMessage(msg.channel.id, soundList)
-        signale.success(`Sent help message for ${commandArray[1]}`)
+        signale.success(`Sent help message for ${values.join(' ')}`)
       }
     } else {
       let soundList = sounds
