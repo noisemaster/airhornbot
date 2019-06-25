@@ -559,6 +559,17 @@ const bugenhagen = {
   ]
 }
 
+const mox = {
+  name: 'Jon Moxley',
+  prefix: 'mox',
+  commands: [
+    '!mox'
+  ],
+  files: [
+    { name: 'vince_good_shit', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -597,5 +608,6 @@ module.exports = [
   kay,
   office,
   gultiygear,
-  bugenhagen
+  bugenhagen,
+  mox
 ]
