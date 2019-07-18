@@ -570,6 +570,17 @@ const mox = {
   ]
 }
 
+const cody = {
+  name: 'Cody ~~Rhodes~~',
+  prefix: 'cody',
+  commands: [
+    '!cody'
+  ],
+  files: [
+    { name: 'horse', filetype: 'webm'}
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -609,5 +620,6 @@ module.exports = [
   office,
   gultiygear,
   bugenhagen,
-  mox
+  mox,
+  cody
 ]
