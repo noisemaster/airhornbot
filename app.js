@@ -2,6 +2,8 @@ const Eris = require('eris')
 const signale = require('signale')
 const sounds = require('./sounds')
 const { discordToken } = require('./config')
+const { botStatus } = require('./config')
+const { botStatusType } = require('./config')
 
 const bot = new Eris(discordToken)
 let soundQueue = {}
@@ -9,7 +11,7 @@ let activeSessions = new Set()
 
 bot.on('ready', () => {
   signale.success('Ready')
-  bot.editStatus({name: 'airhorn.wav', type: 2})
+  bot.editStatus({name: botStatus, type: botStatusType)
 })
 
 bot.on('messageCreate', msg => {
