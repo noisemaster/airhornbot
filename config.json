@@ -1,0 +1,5 @@
+{
+    "discordToken": "your bot token from Discord",
+    "botStatus" : "airhorn.wav",
+    "botStatusType" : "2"
+}
