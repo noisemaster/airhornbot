@@ -17,42 +17,42 @@ This bot is a rewrite in NodeJS of the original Discord's Airhornbot. It has alm
 # Commands
 #### To get a list of all commands directly on Discord, type `!help`.  To get a specific help on a command and to see the commands needed to play a sound directly, type `!help {name on the left}`.
 
-```**airhorn** - !airhorn
-**overwatch** - !overwatch, !owult
-**khaled** - !anotha, !anothaone
-**cena** - !johncena, !cena
-**cow** - !stan, !stanislav
-**birthday** - !birthday, !bday
-**roode** - !roode
-**revival** - !revival
-**styles** - !styles, !aj
-**dummy** - !dummy
-**dota** - !dota, !tobi, !tobiwan
-**jones** - !jones, !alexjones
-**mummy** - !mummy
-**imhere** - !im_here, !imhere
-**newsreel** - !newsreel
-**logan** - !logan
-**foxy** - !foxy
-**money** - !money
-**gw2** - !gw2
-**weed** - !theweed, !weed
-**assblast** - !assblastusa
-**rwby** - !rwby
-**balor** - !finn, !balor
-**🌹** - !rose, !🌹
-**jordan** - !jordan
-**blazblue** - !blazblue
-**undernight** - !undernight
-**grado** - !grado
-**raggedy ann & andy** - !rag
-**payday 2** - !pd2, !payday2
-**striminal** - !striminal
-**Sami Zayn** - !sz, !sami, !zayn
-**Billie Kay** - !bk, !kay
-**The Office** - !office
-**Guilty Gear** - !guilty
-**Eric Bugenhagen** - !bugenhagen
-**Jon Moxley** - !mox
-**Cody Rhodes** - !cody
+```airhorn - !airhorn
+overwatch - !overwatch, !owult
+khaled - !anotha, !anothaone
+cena - !johncena, !cena
+cow - !stan, !stanislav
+birthday - !birthday, !bday
+roode - !roode
+revival - !revival
+styles - !styles, !aj
+dummy - !dummy
+dota - !dota, !tobi, !tobiwan
+jones - !jones, !alexjones
+mummy - !mummy
+imhere - !im_here, !imhere
+newsreel - !newsreel
+logan - !logan
+foxy - !foxy
+money - !money
+gw2 - !gw2
+weed - !theweed, !weed
+assblast - !assblastusa
+rwby - !rwby
+balor - !finn, !balor
+🌹 - !rose, !🌹
+jordan - !jordan
+blazblue - !blazblue
+undernight - !undernight
+grado - !grado
+raggedy ann & andy - !rag
+payday 2 - !pd2, !payday2
+striminal - !striminal
+Sami Zayn - !sz, !sami, !zayn
+Billie Kay - !bk, !kay
+The Office - !office
+Guilty Gear - !guilty
+Eric Bugenhagen - !bugenhagen
+Jon Moxley - !mox
+Cody Rhodes - !cody
 ```
