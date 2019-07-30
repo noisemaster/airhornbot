@@ -15,7 +15,7 @@ This bot is a rewrite in NodeJS of the original Discord's Airhornbot. It has alm
 - To leave the Screen, do `CTRL + A D`
 
 # Commands
-**To get a list of all commands directly on Discord, type `!help`.  To get a specific help on a command and to see the commands needed to play a sound directly, type `!help {name on the left}`.**
+**To get a list of all commands directly on Discord, type** `!help`**.  To get a specific help on a command and to see the commands needed to play a sound directly, type** `!help {name on the left}`**.**
 
 ```airhorn - !airhorn
 overwatch - !overwatch, !owult
