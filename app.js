@@ -11,7 +11,7 @@ let activeSessions = new Set()
 
 bot.on('ready', () => {
   signale.success('Ready')
-  bot.editStatus({name: botStatus, type: botStatusType)
+  bot.editStatus({name: botStatus, type: botStatusType})
 })
 
 bot.on('messageCreate', msg => {
