@@ -8,8 +8,11 @@ This bot is a rewrite in NodeJS of the original Discord's Airhornbot. It has alm
 - Install it with `npm install`
 - Create your Discord Application [here](https://discordapp.com/developers/applications/)
 - Make it a bot by going to "Bot", then "**Add bot**"
+- Rename the `config.example.json` to `config.json`.
 - Copy your bot's **token** and paste it in the `config.json` file.
 - Invite your bot to your server by going to "OAuth2", select "bot" and give it permissions to : View channels, Send messages, Connect and Speak. You must be administrator on the server you want to add the bot to.
+
+## Backgrounding (Optional)
 - Install screen to run the bot in the background : `sudo apt install screen -y`
 - Then, do `screen npm run start` and you're done!
 - To leave the Screen, do `CTRL + A D`
