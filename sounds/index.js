@@ -581,6 +581,17 @@ const cody = {
   ]
 }
 
+const jericho = {
+  name: 'Chris Jericho',
+  prefix: 'jericho',
+  commands: [
+    '!jericho'
+  ],
+  files: [
+    { name: 'bubbly', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -621,5 +632,6 @@ module.exports = [
   gultiygear,
   bugenhagen,
   mox,
-  cody
+  cody,
+  jericho
 ]

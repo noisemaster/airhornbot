@@ -60,3 +60,4 @@ This bot is a rewrite in NodeJS of the original Discord's Airhornbot. It has alm
 |Eric Bugenhagen | !bugenhagen|
 |Jon Moxley | !mox|
 |Cody Rhodes | !cody|
+|Chris Jericho | !jericho|
