@@ -61,3 +61,4 @@ This bot is a rewrite in NodeJS of the original Discord's Airhornbot. It has alm
 |Jon Moxley | !mox|
 |Cody Rhodes | !cody|
 |Chris Jericho | !jericho|
+|Tony Khan | !tk, !khan|

@@ -592,6 +592,18 @@ const jericho = {
   ]
 }
 
+const tk = {
+  name: 'Tony Khan',
+  prefix: 'tk',
+  commands: [
+    '!tonykhan',
+    '!khan',
+  ],
+  files: [
+    { name: 'wiener', filetype: 'webm' }
+  ]
+}
+
 // This module exports all the sound catgories used in the bot
 module.exports = [
   airhorn,
@@ -633,5 +645,6 @@ module.exports = [
   bugenhagen,
   mox,
   cody,
-  jericho
+  jericho,
+  tk
 ]
