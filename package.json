@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "eris": "^0.8.6",
+    "eris": "^0.11.0",
     "signale": "^1.2.1"
   },
   "devDependencies": {
